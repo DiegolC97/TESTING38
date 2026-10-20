@@ -1,0 +1,64 @@
+/*
+ * Shared visual base — the ONLY place colors, fonts, type sizes, spacing and
+ * the content width are defined. Every page inherits these through Tailwind
+ * utilities (bg-brand, text-foreground, max-w-content, text-lg, ...).
+ *
+ * The theme is light only. Do not add dark variants.
+ */
+@theme {
+  /* ---- Colors (defaults removed so every color comes from here) ---- */
+  --color-*: initial;
+
+  /* Main brand color. Change these four lines to rebrand the whole app. */
+  --color-brand: #4f46e5;
+  --color-brand-hover: #4338ca;
+  --color-brand-soft: #eef2ff;
+  --color-brand-contrast: #ffffff;
+
+  /* Neutral surfaces and text */
+  --color-white: #ffffff;
+  --color-background: #ffffff;
+  --color-surface: #f8fafc;
+  --color-border: #e2e8f0;
+  --color-foreground: #0f172a;
+  --color-muted: #475569;
+
+  /* ---- Fonts (families are loaded in src/brand/fonts.ts) ---- */
+  --font-sans: var(--font-brand-sans), ui-sans-serif, system-ui, sans-serif;
+
+  /* ---- Type scale ---- */
+  --text-*: initial;
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1rem;
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.25rem;
+  --text-base: 1rem;
+  --text-base--line-height: 1.625rem;
+  --text-lg: 1.125rem;
+  --text-lg--line-height: 1.75rem;
+  --text-xl: 1.25rem;
+  --text-xl--line-height: 1.75rem;
+  --text-2xl: 1.5rem;
+  --text-2xl--line-height: 2rem;
+  --text-3xl: 1.875rem;
+  --text-3xl--line-height: 2.25rem;
+  --text-4xl: 2.25rem;
+  --text-4xl--line-height: 2.5rem;
+  --text-5xl: 3rem;
+  --text-5xl--line-height: 1.1;
+  --text-6xl: 3.75rem;
+  --text-6xl--line-height: 1.05;
+
+  /* ---- Spacing ---- */
+  --spacing: 0.25rem; /* base unit: p-4 = 1rem */
+  --spacing-section: 5rem; /* vertical rhythm between page sections */
+  --spacing-section-sm: 3.5rem;
+
+  /* ---- Layout ---- */
+  --container-content: 72rem; /* max-w-content: consistent page width */
+  --radius-card: 1rem;
+  --radius-button: 0.5rem;
+
+  /* ---- Shadows ---- */
+  --shadow-card: 0 1px 2px 0 rgb(15 23 42 / 0.04), 0 8px 24px -12px rgb(15 23 42 / 0.15);
+}

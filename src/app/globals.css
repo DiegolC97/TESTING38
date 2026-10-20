@@ -1,0 +1,78 @@
+@import "tailwindcss";
+@import "../brand/theme.css";
+
+@layer base {
+  html {
+    color-scheme: light;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--color-foreground);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+
+  /* Visible keyboard focus for every interactive element, in the brand color. */
+  :focus-visible {
+    outline: 3px solid var(--color-brand);
+    outline-offset: 3px;
+  }
+}
+
+/*
+ * Default text rhythm for pages under src/app/(pages)/ that bring no styling
+ * of their own. Kept in the base layer so utilities can still override it.
+ */
+@layer base {
+  .page-content h1 {
+    font-size: var(--text-4xl);
+    line-height: var(--text-4xl--line-height);
+  }
+  .page-content h2 {
+    margin-top: calc(var(--spacing) * 10);
+    font-size: var(--text-2xl);
+    line-height: var(--text-2xl--line-height);
+  }
+  .page-content h3 {
+    margin-top: calc(var(--spacing) * 6);
+    font-size: var(--text-xl);
+    line-height: var(--text-xl--line-height);
+  }
+  .page-content p,
+  .page-content ul,
+  .page-content ol {
+    margin-top: calc(var(--spacing) * 4);
+    font-size: var(--text-lg);
+    line-height: var(--text-lg--line-height);
+    color: var(--color-muted);
+  }
+  .page-content ul {
+    list-style: disc;
+    padding-left: calc(var(--spacing) * 6);
+  }
+  .page-content ol {
+    list-style: decimal;
+    padding-left: calc(var(--spacing) * 6);
+  }
+  .page-content a {
+    color: var(--color-brand);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+  .page-content a:hover {
+    color: var(--color-brand-hover);
+  }
+}
